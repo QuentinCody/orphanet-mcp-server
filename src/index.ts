@@ -14,7 +14,7 @@ interface OrphanetEnv {
 }
 
 export class MyMCP extends McpAgent {
-    server: any = new McpServer({
+    server = new McpServer({
         name: "orphanet",
         version: "0.1.0",
     });

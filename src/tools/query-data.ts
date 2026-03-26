@@ -6,7 +6,7 @@ interface QueryEnv {
     ORPHANET_DATA_DO?: unknown;
 }
 
-export function registerQueryData(server: McpServer, env?: QueryEnv) {
+export function registerQueryData(server: McpServer, env?: QueryEnv): void {
     const handler = createQueryDataHandler("ORPHANET_DATA_DO", "orphanet");
 
     server.registerTool(
