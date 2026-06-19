@@ -35,6 +35,8 @@ export function registerCodeMode(
     // Register the execute tool (V8 isolate via DynamicWorkerExecutor)
     const executeTool = createExecuteTool({
         prefix: "orphanet",
+        // Verifiable provenance: orphanet_execute results carry a _meta.citation.
+        source: { id: "orphanet", name: "Orphanet", url: "https://www.orpha.net", license: "CC BY 4.0" },
         catalog: orphanetCatalog,
         apiFetch,
         doNamespace: env.ORPHANET_DATA_DO,
