@@ -1,0 +1,742 @@
+{
+  "source_url": "https://api.orphadata.com/openapi.json",
+  "observed_at": "2026-10-05",
+  "source_sha256": "d38a04b3219fe03e3d9f86c8f33983dd8f22db8d29f491546c7cf4accdabce59",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/rd-associated-genes/genes",
+      "parameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/rd-associated-genes/genes/names/{name}",
+      "parameters": [
+        {
+          "name": "name",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-associated-genes/genes/symbols/{symbol}",
+      "parameters": [
+        {
+          "name": "symbol",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-associated-genes/orphacodes",
+      "parameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/rd-associated-genes/orphacodes/{orphacode}",
+      "parameters": [
+        {
+          "name": "orphacode",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "format": "int32",
+            "minimum": 0,
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-classification/hchids",
+      "parameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/rd-classification/hchids/{hchid}",
+      "parameters": [
+        {
+          "name": "hchid",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "minimum": 0,
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-classification/hchids/{hchid}/orphacodes",
+      "parameters": [
+        {
+          "name": "hchid",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "minimum": 0,
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-classification/orphacodes",
+      "parameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/rd-classification/orphacodes/{orphacode}/hchids",
+      "parameters": [
+        {
+          "name": "orphacode",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "format": "int32",
+            "minimum": 0,
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-classification/orphacodes/{orphacode}/hchids/{hchid}",
+      "parameters": [
+        {
+          "name": "orphacode",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "format": "int32",
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "hchid",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "minimum": 0,
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-cross-referencing/icd-10s",
+      "parameters": [
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt",
+              "tr",
+              "uk",
+              "zh"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-cross-referencing/icd-10s/{icd}",
+      "parameters": [
+        {
+          "name": "icd",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt",
+              "tr",
+              "uk",
+              "zh"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-cross-referencing/icd-11s",
+      "parameters": [
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt",
+              "tr",
+              "uk",
+              "zh"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-cross-referencing/icd-11s/{icd}",
+      "parameters": [
+        {
+          "name": "icd",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt",
+              "tr",
+              "uk",
+              "zh"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-cross-referencing/omims",
+      "parameters": [
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt",
+              "tr",
+              "uk",
+              "zh"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-cross-referencing/omims/{omim}",
+      "parameters": [
+        {
+          "name": "omim",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt",
+              "tr",
+              "uk",
+              "zh"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-cross-referencing/orphacodes",
+      "parameters": [
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt",
+              "tr",
+              "uk",
+              "zh"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-cross-referencing/orphacodes/names/{name}",
+      "parameters": [
+        {
+          "name": "name",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt",
+              "tr",
+              "uk",
+              "zh"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-cross-referencing/orphacodes/{orphacode}",
+      "parameters": [
+        {
+          "name": "orphacode",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "format": "int32",
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt",
+              "tr",
+              "uk",
+              "zh"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-epidemiology/orphacodes",
+      "parameters": [
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-epidemiology/orphacodes/{orphacode}",
+      "parameters": [
+        {
+          "name": "orphacode",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "format": "int32",
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-medical-specialties/orphacodes",
+      "parameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/rd-medical-specialties/orphacodes/{orphacode}",
+      "parameters": [
+        {
+          "name": "orphacode",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "format": "int32",
+            "minimum": 0,
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-medical-specialties/parents",
+      "parameters": []
+    },
+    {
+      "method": "GET",
+      "path": "/rd-medical-specialties/parents/{parentcode}",
+      "parameters": [
+        {
+          "name": "parentcode",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "format": "int32",
+            "minimum": 0,
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-natural_history/orphacodes",
+      "parameters": [
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-natural_history/orphacodes/{orphacode}",
+      "parameters": [
+        {
+          "name": "orphacode",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "format": "int32",
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "cs",
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pl",
+              "pt"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-phenotypes/hpoids",
+      "parameters": [
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pt"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-phenotypes/hpoids/{hpoids}",
+      "parameters": [
+        {
+          "name": "hpoids",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array",
+            "uniqueItems": true
+          }
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pt"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-phenotypes/orphacodes",
+      "parameters": [
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pt"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/rd-phenotypes/orphacodes/{orphacode}",
+      "parameters": [
+        {
+          "name": "orphacode",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "exclusiveMinimum": true,
+            "format": "int32",
+            "minimum": 0,
+            "type": "integer"
+          }
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "schema": {
+            "default": "en",
+            "enum": [
+              "de",
+              "en",
+              "es",
+              "fr",
+              "it",
+              "nl",
+              "pt"
+            ],
+            "type": "string"
+          }
+        }
+      ]
+    }
+  ]
+}

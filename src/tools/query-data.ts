@@ -1,5 +1,6 @@
 import type { McpServer } from "@bio-mcp/shared/mcp";
 import { z } from "zod";
+import { orphanetResponse } from "../lib/tool-result";
 import { createQueryDataHandler } from "@bio-mcp/shared/staging/utils";
 
 interface QueryEnv {
@@ -9,12 +10,12 @@ interface QueryEnv {
 export function registerQueryData(server: McpServer, env?: QueryEnv): void {
     const handler = createQueryDataHandler("ORPHANET_DATA_DO", "orphanet");
 
-    server.registerTool(
-        "orphanet_query_data",
+    for (const toolName of ["orphanet_query_data", "mcp_orphanet_query_data"]) server.registerTool(
+        toolName,
         {
             title: "Query Staged Orphanet Data",
             description:
-                "Query staged Orphanet rare disease data using SQL. Use this when responses are too large and have been staged with a data_access_id.",
+                "Query staged Orphanet data using SQL. Use this when responses are too large and have been staged with a data_access_id.",
             inputSchema: {
                 data_access_id: z
                     .string()
@@ -29,7 +30,6 @@ export function registerQueryData(server: McpServer, env?: QueryEnv): void {
                     .int()
                     .positive()
                     .max(10000)
-                    .default(100)
                     .optional()
                     .describe("Maximum number of rows to return (default: 100)"),
             },
@@ -37,10 +37,10 @@ export function registerQueryData(server: McpServer, env?: QueryEnv): void {
         async (args, extra) => {
             const runtimeEnv =
                 env || (extra as { env?: QueryEnv })?.env || {};
-            return handler(
+            return orphanetResponse(() => handler(
                 args as Record<string, unknown>,
                 runtimeEnv as Record<string, unknown>,
-            );
+            ), runtimeEnv, toolName, extra, args);
         },
     );
 }

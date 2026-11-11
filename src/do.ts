@@ -1,107 +1,22 @@
-/**
- * OrphanetDataDO — Durable Object for staging large Orphanet responses.
- *
- * Extends RestStagingDO with data unwrapping and schema hints for Orphanet
- * RD API responses.
- *
- * ## Problem solved
- *
- * Orphanet API responses are wrapped in `{ data: { __count, __licence, results } }`.
- * The base class pipeline calls `detectArrays(data)` which cannot navigate this
- * three-level nesting reliably:
- *
- * - Array results: `detectArrays` can find `results` via single-key + known-key
- *   recursion, but only when `data` is the sole top-level key.
- * - Single-object results (cross-ref, epi, natural history): `detectArrays` sees
- *   `{ __count, __licence, results: {object} }` as a 3-key object with no arrays
- *   → falls through to the JSON blob fallback (`payloads` table).
- *
- * ## Fix
- *
- * Override `fetch()` to intercept `/process` requests and unwrap `data.results`
- * from the Orphanet envelope BEFORE delegating to the base class. This way:
- *
- * 1. For array results: `detectArrays` gets the array directly
- * 2. For single-object results: `detectArrays` finds the array properties
- *    (ExternalReference, Prevalence, HPODisorderAssociation, etc.) directly
- * 3. `getSchemaHints()` operates on the same unwrapped data, so hints align
- *    with what `detectArrays` discovers
- *
- * This is the same pattern used by entrez-mcp-server/src/do.ts.
- */
-
+/** OrphanetDataDO retains native envelopes and projects source-linked SQL tables. */
 import { RestStagingDO } from "@bio-mcp/shared/staging/rest-staging-do";
 import type { SchemaHints } from "@bio-mcp/shared/staging/schema-inference";
+import { geneSchemaHints, geneTables, orphanetResults } from "./lib/gene-staging";
 
 export class OrphanetDataDO extends RestStagingDO {
-	/**
-	 * Intercept /process to unwrap the Orphanet API envelope before staging.
-	 *
-	 * The staging caller sends: { data: <orphanet_api_response>, context?: {...} }
-	 * where orphanet_api_response = { data: { __count, __licence, results: ... } }
-	 *
-	 * We unwrap to: { data: <results>, context?: {...} }
-	 * so the base class pipeline sees the actual data.
-	 */
-	async fetch(request: Request): Promise<Response> {
-		const url = new URL(request.url);
-
-		if (url.pathname === "/process" && request.method === "POST") {
-			const json = (await request.json()) as Record<string, unknown>;
-			const apiResponse = json?.data ?? json;
-
-			// Unwrap Orphanet envelope: { data: { __count, __licence, results } } → results
-			const unwrapped = this.unwrapOrphanetResponse(apiResponse);
-
-			const newRequest = new Request(request.url, {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({
-					data: unwrapped,
-					...(json?.context ? { context: json.context } : {}),
-				}),
-			});
-			return super.fetch(newRequest);
-		}
-
-		return super.fetch(request);
-	}
-
-	/**
-	 * Unwrap the Orphanet API envelope to extract the actual data.
-	 *
-	 * Input shapes:
-	 *   { data: { __count, __licence, results: [...] } }  → returns the array
-	 *   { data: { __count, __licence, results: {...} } }   → returns the object
-	 *   anything else                                       → returns as-is
-	 */
-	private unwrapOrphanetResponse(apiResponse: unknown): unknown {
-		if (!apiResponse || typeof apiResponse !== "object" || Array.isArray(apiResponse)) {
-			return apiResponse;
-		}
-
-		const obj = apiResponse as Record<string, unknown>;
-		const innerData = obj.data;
-
-		if (innerData && typeof innerData === "object" && !Array.isArray(innerData)) {
-			const inner = innerData as Record<string, unknown>;
-			if ("results" in inner) {
-				return inner.results;
-			}
-		}
-
-		return apiResponse;
-	}
+  protected getTabularData(data: unknown): unknown { return geneTables(data) ?? orphanetResults(data); }
 
 	/**
 	 * Schema hints for the UNWRAPPED Orphanet data.
 	 *
-	 * After fetch() unwrapping, `data` is one of:
+	 * The SQL projection unwraps results while canonical payloads retain the envelope:
 	 *   - An array (list/search results like HPO phenotype search)
 	 *   - A single object with array properties (cross-ref, epi, natural history)
 	 *   - A single object without arrays (rare — disorder detail)
 	 */
-	protected getSchemaHints(data: unknown): SchemaHints | undefined {
+	protected getSchemaHints(value: unknown): SchemaHints | undefined {
+		if (geneTables(value)) return geneSchemaHints;
+		const data = orphanetResults(value);
 		if (!data || typeof data !== "object") return undefined;
 
 		// === Array results (list/search endpoints) ===

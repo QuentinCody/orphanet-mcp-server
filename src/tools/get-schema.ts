@@ -1,5 +1,6 @@
 import type { McpServer } from "@bio-mcp/shared/mcp";
 import { z } from "zod";
+import { orphanetResponse } from "../lib/tool-result";
 import { createGetSchemaHandler } from "@bio-mcp/shared/staging/utils";
 
 interface SchemaEnv {
@@ -9,8 +10,8 @@ interface SchemaEnv {
 export function registerGetSchema(server: McpServer, env?: SchemaEnv): void {
     const handler = createGetSchemaHandler("ORPHANET_DATA_DO", "orphanet");
 
-    server.registerTool(
-        "orphanet_get_schema",
+    for (const toolName of ["orphanet_get_schema", "mcp_orphanet_get_schema"]) server.registerTool(
+        toolName,
         {
             title: "Get Staged Data Schema",
             description:
@@ -29,11 +30,11 @@ export function registerGetSchema(server: McpServer, env?: SchemaEnv): void {
         async (args, extra) => {
             const runtimeEnv =
                 env || (extra as { env?: SchemaEnv })?.env || {};
-            return handler(
+            return orphanetResponse(() => handler(
                 args as Record<string, unknown>,
                 runtimeEnv as Record<string, unknown>,
                 (extra as Record<string, unknown>),
-            );
+            ), runtimeEnv, toolName, extra, args);
         },
     );
 }

@@ -1,7 +1,7 @@
 /**
  * Orphanet RD API catalog — hand-built from https://api.orphadata.com OpenAPI spec.
  *
- * Covers ~23 endpoints across 7 categories: gene, classification, cross-reference,
+ * Covers the documented GET operations across 7 categories: gene, classification, cross-reference,
  * phenotype, epidemiology, natural-history, and specialty.
  *
  * Orphanet is the European reference portal for rare diseases and orphan drugs.
@@ -11,19 +11,18 @@
  */
 
 import type { ApiCatalog } from "@bio-mcp/shared/codemode/catalog";
+import { geneEndpoints, geneNotes, geneWorkflows } from "./genes";
+import { discoveryEndpoints, languageParameter } from "./discovery";
+import { geneHandoffWorkflow } from "./gene-handoff";
 
 export const orphanetCatalog: ApiCatalog = {
     name: "Orphanet RD API",
     baseUrl: "https://api.orphadata.com",
     version: "1.0",
     auth: "none",
-    endpointCount: 18,
-    notes:
+    endpointCount: 32,
+    notes: geneNotes +
         "- ORPHAcodes are numeric identifiers unique to Orphanet (e.g., 558 for Marfan syndrome, 730 for Ehlers-Danlos syndrome)\n" +
-        "- NOTE: The /rd-associated-genes/* endpoints are currently returning 404 on Orphanet's side (as of 2026-03).\n" +
-        "  WORKAROUND for gene associations: Use /rd-cross-referencing/orphacodes/{orphacode} to get the OMIM number,\n" +
-        "  then look up the gene via DECIPHER (decipher_gene_lookup) or OMIM. Or use /rd-phenotypes to get HPO terms\n" +
-        "  and search for associated genes via ontology-hub or Ensembl.\n" +
         "- Prevalence types: Point prevalence, Birth prevalence, Lifetime prevalence, Incidence, Annual incidence\n" +
         "- Prevalence classes: <1/1000000, 1-9/1000000, 1-9/100000, 1/100000-1/10000, 6-9/10000, Unknown\n" +
         "- Inheritance patterns: Autosomal dominant, Autosomal recessive, X-linked dominant, X-linked recessive, Mitochondrial, Multigenic/multifactorial, Not applicable\n" +
@@ -31,11 +30,13 @@ export const orphanetCatalog: ApiCatalog = {
         "- HPO (Human Phenotype Ontology) IDs follow the format HP:NNNNNNN (e.g., HP:0001382)\n" +
         "- hchid = classification hierarchy ID; each classification groups rare diseases by medical domain\n" +
         "- Cross-references link ORPHAcodes to ICD-10, ICD-11, OMIM, and other coding systems\n" +
-        "- The `lang` query parameter controls response language (en, fr, de, es, it, pt, nl, pl, cs); defaults to en\n" +
+        "- `lang` is documented for cross-reference, phenotype, epidemiology and natural-history routes only; gene, classification and medical-specialty routes report English. Language enums differ by route: cross-reference supports 12, epidemiology/natural history nine, phenotype seven; consult the selected endpoint. Preserve datasetCategory.lang; echoed query parameters do not prove translation.\n" +
         "- Responses are JSON; most return objects with nested arrays or direct objects\n" +
         "- No authentication required\n" +
-        "- Rate limiting is lenient; no specific headers returned",
+        "- No provider rate-limit guarantee is asserted; respect returned statuses and avoid repeated bulk downloads.",
     endpoints: [
+        ...geneEndpoints,
+        ...discoveryEndpoints,
         // =====================================================================
         // === Classifications ===
         // =====================================================================
@@ -45,21 +46,13 @@ export const orphanetCatalog: ApiCatalog = {
             summary:
                 "List all rare disease classification hierarchies (e.g., Rare neurological disease, Rare cardiac disease). Returns hchid identifiers and names.",
             category: "classification",
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+
         },
         {
             method: "GET",
             path: "/rd-classification/hchids/{hchid}/orphacodes",
             summary:
-                "Get all diseases (ORPHAcodes) within a specific classification hierarchy. Returns the hierarchy tree of disorders.",
+                "Get the disease membership list for one classification. Use /rd-classification/hchids/{hchid} for the native parent/child hierarchy.",
             category: "classification",
             pathParams: [
                 {
@@ -70,15 +63,7 @@ export const orphanetCatalog: ApiCatalog = {
                         "Classification hierarchy ID (numeric identifier from /rd-classification/hchids)",
                 },
             ],
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+
         },
         {
             method: "GET",
@@ -94,15 +79,7 @@ export const orphanetCatalog: ApiCatalog = {
                     description: "ORPHAcode of the disorder",
                 },
             ],
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+
         },
 
         // =====================================================================
@@ -114,15 +91,7 @@ export const orphanetCatalog: ApiCatalog = {
             summary:
                 "List all ICD-10 codes that cross-reference to Orphanet rare diseases.",
             category: "cross-reference",
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("cross-reference")],
         },
         {
             method: "GET",
@@ -139,15 +108,7 @@ export const orphanetCatalog: ApiCatalog = {
                         "ICD-10 code (e.g., 'Q87.4' for Marfan syndrome, 'E84' for cystic fibrosis)",
                 },
             ],
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("cross-reference")],
         },
         {
             method: "GET",
@@ -155,15 +116,7 @@ export const orphanetCatalog: ApiCatalog = {
             summary:
                 "List all OMIM codes that cross-reference to Orphanet rare diseases.",
             category: "cross-reference",
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("cross-reference")],
         },
         {
             method: "GET",
@@ -180,15 +133,7 @@ export const orphanetCatalog: ApiCatalog = {
                         "OMIM number (e.g., '154700' for Marfan syndrome)",
                 },
             ],
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("cross-reference")],
         },
         {
             method: "GET",
@@ -196,15 +141,7 @@ export const orphanetCatalog: ApiCatalog = {
             summary:
                 "List all diseases (ORPHAcodes) that have cross-references to external coding systems.",
             category: "cross-reference",
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("cross-reference")],
         },
         {
             method: "GET",
@@ -221,15 +158,7 @@ export const orphanetCatalog: ApiCatalog = {
                         "Disease name fragment to search for (e.g., 'Marfan', 'cystic fibrosis')",
                 },
             ],
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("cross-reference")],
         },
         {
             method: "GET",
@@ -245,15 +174,7 @@ export const orphanetCatalog: ApiCatalog = {
                     description: "ORPHAcode of the disorder",
                 },
             ],
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("cross-reference")],
         },
 
         // =====================================================================
@@ -265,15 +186,7 @@ export const orphanetCatalog: ApiCatalog = {
             summary:
                 "List all HPO (Human Phenotype Ontology) phenotype terms that are associated with rare diseases in Orphanet.",
             category: "phenotype",
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("phenotype")],
         },
         {
             method: "GET",
@@ -284,21 +197,13 @@ export const orphanetCatalog: ApiCatalog = {
             pathParams: [
                 {
                     name: "hpoids",
-                    type: "string",
+                    type: "array",
                     required: true,
                     description:
-                        "HPO ID(s) — single ID like 'HP:0001382' or comma-separated for multiple",
+                        "Nonempty unique HPO IDs, serialized as a comma-separated path segment (e.g., ['HP:0001382', 'HP:0001250'])",
                 },
             ],
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("phenotype")],
         },
         {
             method: "GET",
@@ -314,15 +219,7 @@ export const orphanetCatalog: ApiCatalog = {
                     description: "ORPHAcode of the disorder",
                 },
             ],
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("phenotype")],
         },
 
         // =====================================================================
@@ -334,15 +231,7 @@ export const orphanetCatalog: ApiCatalog = {
             summary:
                 "List all diseases (ORPHAcodes) that have epidemiology data. Returns ORPHAcodes with disease names and prevalence information.",
             category: "epidemiology",
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("epidemiology")],
         },
         {
             method: "GET",
@@ -358,15 +247,7 @@ export const orphanetCatalog: ApiCatalog = {
                     description: "ORPHAcode of the disorder",
                 },
             ],
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("epidemiology")],
         },
 
         // =====================================================================
@@ -378,15 +259,7 @@ export const orphanetCatalog: ApiCatalog = {
             summary:
                 "List all diseases (ORPHAcodes) that have natural history data: age of onset, age of death, and inheritance patterns.",
             category: "natural-history",
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("natural-history")],
         },
         {
             method: "GET",
@@ -402,15 +275,7 @@ export const orphanetCatalog: ApiCatalog = {
                     description: "ORPHAcode of the disorder",
                 },
             ],
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+            queryParams: [languageParameter("natural-history")],
         },
 
         // =====================================================================
@@ -430,15 +295,8 @@ export const orphanetCatalog: ApiCatalog = {
                     description: "ORPHAcode of the disorder",
                 },
             ],
-            queryParams: [
-                {
-                    name: "lang",
-                    type: "string",
-                    required: false,
-                    description: "Language code",
-                    default: "en",
-                },
-            ],
+
         },
     ],
+    workflows: [...geneWorkflows, geneHandoffWorkflow],
 };

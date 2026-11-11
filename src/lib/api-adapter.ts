@@ -1,40 +1,23 @@
 /**
- * Orphanet API adapter — wraps orphanetFetch/orphanetPost into the ApiFetchFn
+ * Orphanet API adapter — wraps orphanetFetch into the ApiFetchFn
  * interface for use by the Code Mode __api_proxy tool.
  */
 
 import type { ApiFetchFn } from "@bio-mcp/shared/codemode/catalog";
-import { orphanetFetch, orphanetPost } from "./http";
+import { orphanetFetch } from "./http";
+import { nativeError } from "./native-error";
 
 /**
- * Create an ApiFetchFn that routes through orphanetFetch/orphanetPost.
+ * Create an ApiFetchFn that routes through orphanetFetch.
  * No auth needed — Orphanet RD API is public.
  */
 export function createOrphanetApiFetch(): ApiFetchFn {
     return async (request) => {
-        let response: Response;
+        if (request.method.toUpperCase() !== "GET" || request.body !== undefined) throw Object.assign(new Error("Orphadata supports GET without a body"), { status: 405 });
+        const path = request.path.replace(/^(\/rd-associated-genes\/genes\/symbols\/)([^/?]+)(.*)$/, (_match, prefix: string, symbol: string, suffix: string) => `${prefix}${symbol.toLowerCase()}${suffix}`);
 
-        if (request.method === "POST") {
-            response = await orphanetPost(request.path, request.body as object);
-        } else {
-            response = await orphanetFetch(request.path, request.params);
-        }
-
-        if (!response.ok) {
-            let errorBody: string;
-            try {
-                errorBody = await response.text();
-            } catch {
-                errorBody = response.statusText;
-            }
-            const error = new Error(`HTTP ${response.status}: ${errorBody.slice(0, 200)}`) as Error & {
-                status: number;
-                data: unknown;
-            };
-            error.status = response.status;
-            error.data = errorBody;
-            throw error;
-        }
+        const response = await orphanetFetch(path, request.params);
+        if (!response.ok) throw await nativeError(response, response.url || `https://api.orphadata.com${path}`);
 
         const contentType = response.headers.get("content-type") || "";
         if (!contentType.includes("json")) {

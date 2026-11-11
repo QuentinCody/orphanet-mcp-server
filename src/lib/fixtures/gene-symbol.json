@@ -1,0 +1,2087 @@
+{
+  "data": {
+    "__count": 11,
+    "__licence": {
+      "identifier": "CC-BY-4.0",
+      "link": "https://creativecommons.org/licenses/by/4.0",
+      "name": "Creative Commons Attribution 4.0 International"
+    },
+    "results": [
+      {
+        "Date": "2026-06-23 07:57:31",
+        "DisorderGeneAssociation": [
+          {
+            "DisorderGeneAssociationStatus": "Not yet assessed",
+            "DisorderGeneAssociationType": "Candidate gene tested in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FBN1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166147",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FBN1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3603",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "134797",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FBN1",
+              "Synonym": [
+                "MASS",
+                "Marfan syndrome",
+                "OCTD",
+                "SGS",
+                "asprosin"
+              ],
+              "name": "fibrillin 1"
+            },
+            "SourceOfValidation": null
+          }
+        ],
+        "DisorderGroup": "Disorder",
+        "ORPHAcode": 2084,
+        "OrphanetURL": "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=2084",
+        "Preferred term": "Glaucoma-ectopia lentis-microspherophakia-stiff joints-short stature syndrome",
+        "Typology": "Malformation syndrome"
+      },
+      {
+        "Date": "2026-06-23 07:57:31",
+        "DisorderGeneAssociation": [
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FBN1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166147",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FBN1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3603",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "134797",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FBN1",
+              "Synonym": [
+                "MASS",
+                "Marfan syndrome",
+                "OCTD",
+                "SGS",
+                "asprosin"
+              ],
+              "name": "fibrillin 1"
+            },
+            "SourceOfValidation": "20375004[PMID]"
+          }
+        ],
+        "DisorderGroup": "Disorder",
+        "ORPHAcode": 2833,
+        "OrphanetURL": "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=2833",
+        "Preferred term": "Stiff skin syndrome",
+        "Typology": "Disease"
+      },
+      {
+        "Date": "2026-06-23 07:57:31",
+        "DisorderGeneAssociation": [
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FBN1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166147",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FBN1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3603",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "134797",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FBN1",
+              "Synonym": [
+                "MASS",
+                "Marfan syndrome",
+                "OCTD",
+                "SGS",
+                "asprosin"
+              ],
+              "name": "fibrillin 1"
+            },
+            "SourceOfValidation": null
+          }
+        ],
+        "DisorderGroup": "Subtype of disorder",
+        "ORPHAcode": 284963,
+        "OrphanetURL": "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=284963",
+        "Preferred term": "Marfan syndrome type 1",
+        "Typology": "Clinical subtype"
+      },
+      {
+        "Date": "2026-06-23 07:57:31",
+        "DisorderGeneAssociation": [
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FBN1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166147",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FBN1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3603",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "134797",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FBN1",
+              "Synonym": [
+                "MASS",
+                "Marfan syndrome",
+                "OCTD",
+                "SGS",
+                "asprosin"
+              ],
+              "name": "fibrillin 1"
+            },
+            "SourceOfValidation": "20132243[PMID]"
+          }
+        ],
+        "DisorderGroup": "Disorder",
+        "ORPHAcode": 284979,
+        "OrphanetURL": "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=284979",
+        "Preferred term": "Neonatal Marfan syndrome",
+        "Typology": "Disease"
+      },
+      {
+        "Date": "2026-06-23 07:57:31",
+        "DisorderGeneAssociation": [
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FBN1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166147",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FBN1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3603",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "134797",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FBN1",
+              "Synonym": [
+                "MASS",
+                "Marfan syndrome",
+                "OCTD",
+                "SGS",
+                "asprosin"
+              ],
+              "name": "fibrillin 1"
+            },
+            "SourceOfValidation": "21594992[PMID]_21594993[PMID]"
+          }
+        ],
+        "DisorderGroup": "Disorder",
+        "ORPHAcode": 300382,
+        "OrphanetURL": "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=300382",
+        "Preferred term": "Progeroid and marfanoid aspect-lipodystrophy syndrome",
+        "Typology": "Disease"
+      },
+      {
+        "Date": "2026-06-23 07:57:31",
+        "DisorderGeneAssociation": [
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FBN1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166147",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FBN1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3603",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "134797",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FBN1",
+              "Synonym": [
+                "MASS",
+                "Marfan syndrome",
+                "OCTD",
+                "SGS",
+                "asprosin"
+              ],
+              "name": "fibrillin 1"
+            },
+            "SourceOfValidation": null
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "ADAMTSL4",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000143382",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "ADAMTSL4",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "19706",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "610113",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q6UY14",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q6UY14",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "1q21.2",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "ADAMTSL4",
+              "Synonym": [
+                "DKFZP434K1772"
+              ],
+              "name": "ADAMTS like 4"
+            },
+            "SourceOfValidation": null
+          }
+        ],
+        "DisorderGroup": "Disorder",
+        "ORPHAcode": 1885,
+        "OrphanetURL": "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=1885",
+        "Preferred term": "Isolated ectopia lentis",
+        "Typology": "Malformation syndrome"
+      },
+      {
+        "Date": "2026-06-23 07:57:31",
+        "DisorderGeneAssociation": [
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FBN1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166147",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FBN1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3603",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "134797",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FBN1",
+              "Synonym": [
+                "MASS",
+                "Marfan syndrome",
+                "OCTD",
+                "SGS",
+                "asprosin"
+              ],
+              "name": "fibrillin 1"
+            },
+            "SourceOfValidation": "21683322[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "LTBP3",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000168056",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "LTBP3",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "6716",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "602090",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q9NS15",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q9NS15",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "11q13.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "LTBP3",
+              "Synonym": null,
+              "name": "latent transforming growth factor beta binding protein 3"
+            },
+            "SourceOfValidation": "27068007[PMID]"
+          }
+        ],
+        "DisorderGroup": "Disorder",
+        "ORPHAcode": 969,
+        "OrphanetURL": "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=969",
+        "Preferred term": "Acromicric dysplasia",
+        "Typology": "Malformation syndrome"
+      },
+      {
+        "Date": "2026-06-23 07:57:31",
+        "DisorderGeneAssociation": [
+          {
+            "DisorderGeneAssociationStatus": "Not yet assessed",
+            "DisorderGeneAssociationType": "Candidate gene tested in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FBN1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166147",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FBN1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3603",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "134797",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FBN1",
+              "Synonym": [
+                "MASS",
+                "Marfan syndrome",
+                "OCTD",
+                "SGS",
+                "asprosin"
+              ],
+              "name": "fibrillin 1"
+            },
+            "SourceOfValidation": "20301454[PMID]_8563763[PMID]_9338588[PMID]_16333834[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "SKI",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000157933",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "SKI",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "10896",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "164780",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P12755",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P12755",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "1p36.33-p36.32",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "SKI",
+              "Synonym": [
+                "Sloan-Kettering Institute proto-oncogene"
+              ],
+              "name": "SKI proto-oncogene"
+            },
+            "SourceOfValidation": "23023332[PMID]"
+          }
+        ],
+        "DisorderGroup": "Disorder",
+        "ORPHAcode": 2462,
+        "OrphanetURL": "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=2462",
+        "Preferred term": "Shprintzen-Goldberg syndrome",
+        "Typology": "Malformation syndrome"
+      },
+      {
+        "Date": "2026-06-23 07:57:31",
+        "DisorderGeneAssociation": [
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FBN1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166147",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FBN1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3603",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "134797",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FBN1",
+              "Synonym": [
+                "MASS",
+                "Marfan syndrome",
+                "OCTD",
+                "SGS",
+                "asprosin"
+              ],
+              "name": "fibrillin 1"
+            },
+            "SourceOfValidation": "20301776[PMID]_21683322[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "ADAMTSL2",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000197859",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "ADAMTSL2",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "14631",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "612277",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q86TH1",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q86TH1",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "9q34.2",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "ADAMTSL2",
+              "Synonym": [
+                "KIAA0605"
+              ],
+              "name": "ADAMTS like 2"
+            },
+            "SourceOfValidation": "20301776[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "LTBP3",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000168056",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "LTBP3",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "6716",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "602090",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q9NS15",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q9NS15",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "11q13.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "LTBP3",
+              "Synonym": null,
+              "name": "latent transforming growth factor beta binding protein 3"
+            },
+            "SourceOfValidation": "27068007[PMID]"
+          }
+        ],
+        "DisorderGroup": "Disorder",
+        "ORPHAcode": 2623,
+        "OrphanetURL": "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=2623",
+        "Preferred term": "Geleophysic dysplasia",
+        "Typology": "Malformation syndrome"
+      },
+      {
+        "Date": "2026-06-23 07:57:31",
+        "DisorderGeneAssociation": [
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "ADAMTS10",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000142303",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "ADAMTS10",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "13201",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "1683",
+                  "Source": "IUPHAR"
+                },
+                {
+                  "Reference": "608990",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q9H324",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q9H324",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "19p13.2",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "ADAMTS10",
+              "Synonym": [
+                "ADAM-TS10"
+              ],
+              "name": "ADAM metallopeptidase with thrombospondin type 1 motif 10"
+            },
+            "SourceOfValidation": "20301293[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FBN1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166147",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FBN1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3603",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "134797",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FBN1",
+              "Synonym": [
+                "MASS",
+                "Marfan syndrome",
+                "OCTD",
+                "SGS",
+                "asprosin"
+              ],
+              "name": "fibrillin 1"
+            },
+            "SourceOfValidation": "20301293[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "LTBP2",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000119681",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "LTBP2",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "6715",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "602091",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q14767",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q14767",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "14q24.3",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "LTBP2",
+              "Synonym": null,
+              "name": "latent transforming growth factor beta binding protein 2"
+            },
+            "SourceOfValidation": "20301293[PMID]_22539340[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) (loss of function) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "ADAMTS17",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000140470",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "ADAMTS17",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "17109",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "1689",
+                  "Source": "IUPHAR"
+                },
+                {
+                  "Reference": "607511",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q8TE56",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q8TE56",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q26.3",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "ADAMTS17",
+              "Synonym": [
+                "FLJ16363",
+                "FLJ32769"
+              ],
+              "name": "ADAM metallopeptidase with thrombospondin type 1 motif 17"
+            },
+            "SourceOfValidation": "19836009[PMID]"
+          }
+        ],
+        "DisorderGroup": "Disorder",
+        "ORPHAcode": 3449,
+        "OrphanetURL": "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=3449",
+        "Preferred term": "Weill-Marchesani syndrome",
+        "Typology": "Malformation syndrome"
+      },
+      {
+        "Date": "2026-06-23 07:57:31",
+        "DisorderGeneAssociation": [
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "SMAD4",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000141646",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "SMAD4",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "6770",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "600993",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q13485",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q13485",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "18q21.2",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "SMAD4",
+              "Synonym": [
+                "DPC4"
+              ],
+              "name": "SMAD family member 4"
+            },
+            "SourceOfValidation": "30809044[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "TGFB2",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000092969",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "TGFB2",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "11768",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "190220",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P61812",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P61812",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "1q41",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "TGFB2",
+              "Synonym": [
+                "prepro-transforming growth factor beta-2"
+              ],
+              "name": "transforming growth factor beta 2"
+            },
+            "SourceOfValidation": "22772371[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) (loss of function) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "TGFB3",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000119699",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "TGFB3",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "11769",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "190230",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P10600",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P10600",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "14q24.3",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "TGFB3",
+              "Synonym": [
+                "prepro-transforming growth factor beta-3"
+              ],
+              "name": "transforming growth factor beta 3"
+            },
+            "SourceOfValidation": "23824657[PMID]_25835445[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "TGFBR1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000106799",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "TGFBR1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "11772",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "1788",
+                  "Source": "IUPHAR"
+                },
+                {
+                  "Reference": "190181",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P36897",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P36897",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "9q22.33",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "TGFBR1",
+              "Synonym": [
+                "ACVRLK4",
+                "ALK-5",
+                "ALK5",
+                "TBR-i",
+                "TBRI",
+                "activin A receptor type II-like kinase, 53kDa"
+              ],
+              "name": "transforming growth factor beta receptor 1"
+            },
+            "SourceOfValidation": "20301299[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "TGFBR2",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000163513",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "TGFBR2",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "11773",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "1795",
+                  "Source": "IUPHAR"
+                },
+                {
+                  "Reference": "190182",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P37173",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P37173",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "3p24.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "TGFBR2",
+              "Synonym": [
+                "TBR-ii",
+                "TBRII"
+              ],
+              "name": "transforming growth factor beta receptor 2"
+            },
+            "SourceOfValidation": "20301299[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "EFEMP2",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000172638",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "EFEMP2",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3219",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "604633",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "O95967",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "O95967",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "11q13.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "EFEMP2",
+              "Synonym": [
+                "FBLN4",
+                "UPH1",
+                "fibulin 4"
+              ],
+              "name": "EGF-like fibulin extracellular matrix protein 2"
+            },
+            "SourceOfValidation": "22440127[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Not yet assessed",
+            "DisorderGeneAssociationType": "Candidate gene tested in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "ELN",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000049540",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "ELN",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3327",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "130160",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P15502",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P15502",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "7q11.23",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "ELN",
+              "Synonym": [
+                "SVAS",
+                "WBS",
+                "WS",
+                "Williams-Beuren syndrome",
+                "supravalvular aortic stenosis",
+                "tropoelastin"
+              ],
+              "name": "elastin"
+            },
+            "SourceOfValidation": "24932728[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FBN1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166147",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FBN1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3603",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "134797",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35555",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FBN1",
+              "Synonym": [
+                "MASS",
+                "Marfan syndrome",
+                "OCTD",
+                "SGS",
+                "asprosin"
+              ],
+              "name": "fibrillin 1"
+            },
+            "SourceOfValidation": "20301299[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "FOXE3",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000186790",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "FOXE3",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "3808",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "601094",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q13461",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "1p33",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "FOXE3",
+              "Synonym": [
+                "FREAC8"
+              ],
+              "name": "forkhead box E3"
+            },
+            "SourceOfValidation": "26854927[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "MYH11",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000133392",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "MYH11",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "7569",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "160745",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P35749",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P35749",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "16p13.11",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "MYH11",
+              "Synonym": [
+                "SMHC",
+                "SMMHC",
+                "SMMS-1"
+              ],
+              "name": "myosin heavy chain 11"
+            },
+            "SourceOfValidation": "20301299[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "ACTA2",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000107796",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "ACTA2",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "130",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "102620",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P62736",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P62736",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "10q23.31",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "ACTA2",
+              "Synonym": [
+                "ACTSA"
+              ],
+              "name": "actin alpha 2, smooth muscle"
+            },
+            "SourceOfValidation": "20301299[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "MYLK",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000065534",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "MYLK",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "7590",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "1552",
+                  "Source": "IUPHAR"
+                },
+                {
+                  "Reference": "600922",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q15746",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q15746",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "3q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "MYLK",
+              "Synonym": [
+                "KRP",
+                "MLCK",
+                "MLCK1",
+                "MLCK108",
+                "MLCK210",
+                "MYLK-L",
+                "MYLK1",
+                "Telokin",
+                "kinase related protein",
+                "smMLCK",
+                "smooth muscle myosin light chain kinase"
+              ],
+              "name": "myosin light chain kinase"
+            },
+            "SourceOfValidation": "20301299[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "SMAD3",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000166949",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "SMAD3",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "6769",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "603109",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P84022",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P84022",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q22.33",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "SMAD3",
+              "Synonym": [
+                "HsT17436",
+                "JV15-2"
+              ],
+              "name": "SMAD family member 3"
+            },
+            "SourceOfValidation": "20301299[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) (gain of function) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "PRKG1",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000185532",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "PRKG1",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "9414",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "1492",
+                  "Source": "IUPHAR"
+                },
+                {
+                  "Reference": "176894",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q13976",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q13976",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "10q11.23-q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "PRKG1",
+              "Synonym": [
+                "PGK",
+                "PKG",
+                "PKG1"
+              ],
+              "name": "protein kinase cGMP-dependent 1"
+            },
+            "SourceOfValidation": "23910461[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) (loss of function) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "MFAP5",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000197614",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "MFAP5",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "29673",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "601103",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q13361",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q13361",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "12p13.31",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "MFAP5",
+              "Synonym": [
+                "MAGP2",
+                "MP25",
+                "microfibril-associated glycoprotein-2"
+              ],
+              "name": "microfibril associated protein 5"
+            },
+            "SourceOfValidation": "25434006[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) (loss of function) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "LOX",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000113083",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "LOX",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "6664",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "3097",
+                  "Source": "IUPHAR"
+                },
+                {
+                  "Reference": "153455",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P28300",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P28300",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "5q23.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "LOX",
+              "Synonym": [
+                "protein-lysine 6-oxidase"
+              ],
+              "name": "lysyl oxidase"
+            },
+            "SourceOfValidation": "26838787[PMID]_27432961[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) (loss of function) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "HEY2",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000135547",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "HEY2",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "4881",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "604674",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q9UBP5",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q9UBP5",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "6q22.31",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "HEY2",
+              "Synonym": [
+                "HERP1",
+                "HESR2",
+                "bHLHb32"
+              ],
+              "name": "hes related family bHLH transcription factor with YRPW motif 2"
+            },
+            "SourceOfValidation": "32820247[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) (loss of function) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "SMAD2",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000175387",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "SMAD2",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "6768",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "601366",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q15796",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "Q15796",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "18q21.1",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "SMAD2",
+              "Synonym": [
+                "JV18-1",
+                "MADR2"
+              ],
+              "name": "SMAD family member 2"
+            },
+            "SourceOfValidation": "29967133[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Candidate gene tested in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "MAT2A",
+                  "Source": "ClinVar"
+                },
+                {
+                  "Reference": "ENSG00000168906",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "MAT2A",
+                  "Source": "Genatlas"
+                },
+                {
+                  "Reference": "6904",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "601468",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "P31153",
+                  "Source": "Reactome"
+                },
+                {
+                  "Reference": "P31153",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "2p11.2",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "MAT2A",
+              "Synonym": [
+                "MAT-II",
+                "MATA2",
+                "MATII",
+                "S-adenosylmethionine synthase isoform type-2",
+                "SAMS2"
+              ],
+              "name": "methionine adenosyltransferase 2A"
+            },
+            "SourceOfValidation": "25557781[PMID]"
+          },
+          {
+            "DisorderGeneAssociationStatus": "Assessed",
+            "DisorderGeneAssociationType": "Disease-causing germline mutation(s) in",
+            "Gene": {
+              "ExternalReference": [
+                {
+                  "Reference": "ENSG00000187720",
+                  "Source": "Ensembl"
+                },
+                {
+                  "Reference": "25835",
+                  "Source": "HGNC"
+                },
+                {
+                  "Reference": "614476",
+                  "Source": "OMIM"
+                },
+                {
+                  "Reference": "Q6ZMP0",
+                  "Source": "SwissProt"
+                }
+              ],
+              "GeneType": "gene with protein product",
+              "Locus": [
+                {
+                  "GeneLocus": "15q23",
+                  "LocusKey": 1
+                }
+              ],
+              "Symbol": "THSD4",
+              "Synonym": [
+                "ADAMTSL6",
+                "FLJ13710",
+                "FVSY9334",
+                "PRO34005"
+              ],
+              "name": "thrombospondin type 1 domain containing 4"
+            },
+            "SourceOfValidation": "32855533[PMID]"
+          }
+        ],
+        "DisorderGroup": "Disorder",
+        "ORPHAcode": 91387,
+        "OrphanetURL": "http://www.orpha.net/consor/cgi-bin/OC_Exp.php?lng=en&Expert=91387",
+        "Preferred term": "Familial thoracic aortic aneurysm and aortic dissection",
+        "Typology": "Disease"
+      }
+    ]
+  },
+  "datasetCategory": {
+    "lang": "en",
+    "name": "Rare diseases and associated genes"
+  },
+  "parameters": {
+    "path": {
+      "symbol": "fbn1"
+    },
+    "query": {}
+  },
+  "uri": "https://api.orphadata.com/rd-associated-genes/genes/symbols/fbn1"
+}
+
